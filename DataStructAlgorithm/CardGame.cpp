@@ -2,6 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstdlib>
+#include <ctime>
+#include <random>
 using namespace std;
 
 /*
@@ -70,29 +73,12 @@ public:
 		players.push_back(Player{ name, deck });
 	}
 
-	void InitGame()
-	{
-		if (players.size() != NumberOfPlayer)
-		{
-			cout << "게임 플레이 인원은" << NumberOfPlayer << "인입니다." << endl;
-			return;
-		}
-
-		random_shuffle(cards.begin(), cards.end());
-
-		for (int i = 0; i < players.size(); ++i)
-		{
-			players[i].deck.clear();
-
-			for (int j = 0; j < cards.size() / players.size(); ++j)
-			{
-				players[i].deck.push_back(cards[i * (cards.size() / players.size()) + j]);
-			}
-		}
-	}
-
 	void PlayGame()
 	{
+		InitGame();
+
+		int playCount = 1;
+
 		cout << "게임을 시작합니다." << endl;
 		cout << "이번 게임의 참여자는 ";
 		for (int i = 0; i < players.size(); ++i)
@@ -109,38 +95,78 @@ public:
 		while (!IsPlayersDeckEmpty())
 		{
 			vector<Card> takeCards = TakeCardFromPlayers();
-			cout << "각 플레이어는 카드를 제시합니다." << endl;
+			cout << "[" << playCount++ << "번째 턴]" << endl << "각 플레이어는 카드를 제시합니다." << endl << endl;
 			for (int i = 0; i < players.size(); ++i)
 			{
 				cout << players[i].name << ": " << SuitName[takeCards[i].suit] << " " << takeCards[i].number << endl;
 			}
-			cout << endl << endl;
+			cout << endl;
 
-			vector<bool> isMatched = IsMatchedCards(takeCards);
-
-			// 남은 카드를 회수
-			// 쌍이 없으면 초기화
-
-			break;
-		}
-	}
-
-	const vector<string>& GetWinner()
-	{
-		vector<string> winners;
-
-		for (auto player : players)
-		{
-			if (player.deck.empty())
+			vector<bool> isMatched = IsMatchedCardsList(takeCards);
+			if (IsMatchedCards(isMatched))
 			{
-				winners.push_back(player.name);
+				cout << "문자가 일치하는 카드 쌍을 제거합니다. 남은 카드는 다시 덱으로 가져갑니다." << endl << endl;
+				for (int i = 0; i < players.size(); ++i)
+				{
+					if (isMatched[i])
+					{
+						players[i].deck.pop_back();
+					}
+
+					cout << players[i].name << "의 남은 카드 수: " << players[i].deck.size() << endl;
+				}
 			}
+			else
+			{
+				cout << "일치하는 카드 쌍이 없습니다. 덱을 섞습니다." << endl;
+				for (int i = 0; i < players.size(); ++i)
+				{
+					mt19937 g((unsigned int)time(NULL) + playCount + i);
+					shuffle(players[i].deck.begin(), players[i].deck.end(), g);
+				}
+			}
+			cout << endl;
 		}
 
-		return winners;
+		vector<string> winners = GetWinner();
+
+		cout << "게임이 종료되었습니다. 결과를 발표합니다." << endl << "승자는 ";
+		for (int i = 0; i < winners.size(); ++i)
+		{
+			if (i > 0)
+			{
+				cout << ", ";
+			}
+
+			cout << winners[i];
+		}
+		cout << "입니다!" << endl;
 	}
 
 private:
+	void InitGame()
+	{
+		if (players.size() != NumberOfPlayer)
+		{
+			cout << "게임 플레이 인원은" << NumberOfPlayer << "인입니다." << endl;
+			return;
+		}
+
+		random_device rd;
+		mt19937 g(rd());
+		shuffle(cards.begin(), cards.end(), g);
+
+		for (int i = 0; i < players.size(); ++i)
+		{
+			players[i].deck.clear();
+
+			for (int j = 0; j < cards.size() / players.size(); ++j)
+			{
+				players[i].deck.push_back(cards[i * (cards.size() / players.size()) + j]);
+			}
+		}
+	}
+
 	vector<Card> TakeCardFromPlayers()
 	{
 		vector<Card> takeCards;
@@ -153,10 +179,52 @@ private:
 		return takeCards;
 	}
 
-	vector<bool> IsMatchedCards(const vector<Card>& takeCards)
+	vector<bool> IsMatchedCardsList(const vector<Card>& takeCards)
 	{
-		vector<bool> isMatched;
+		vector<bool> isMatched(4, false);
+		int count = 0;
+
+		for (int i = 0; i < takeCards.size(); ++i)
+		{
+			for (int j = i + 1; j < takeCards.size(); ++j)
+			{
+				if (takeCards[i].suit == takeCards[j].suit)
+				{
+					isMatched[i] = true;
+					isMatched[j] = true;
+				}
+			}
+		}
+
+		for (auto isMatch : isMatched)
+		{
+			count = isMatch ? count + 1 : count;
+		}
+
+		while (count % 2 != 0)
+		{
+			srand((unsigned int)time(NULL));
+			int index = rand() % (int)takeCards.size();
+			if (isMatched[index])
+			{
+				isMatched[index] = false;
+				count--;
+			}
+		}
+
 		return isMatched;
+	}
+
+	bool IsMatchedCards(const vector<bool>& isMatched)
+	{
+		for (auto isMatch : isMatched)
+		{
+			if (isMatch)
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 
 	bool IsPlayersDeckEmpty()
@@ -173,6 +241,21 @@ private:
 		}
 
 		return bIsEmpty;
+	}
+
+	const vector<string> GetWinner()
+	{
+		vector<string> winners;
+
+		for (auto player : players)
+		{
+			if (player.deck.empty())
+			{
+				winners.push_back(player.name);
+			}
+		}
+
+		return winners;
 	}
 
 private:

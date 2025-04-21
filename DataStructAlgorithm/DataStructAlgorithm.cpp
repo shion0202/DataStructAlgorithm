@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
 	vector<string> players = {
-		"Á¤¼ö¿ë", "ÀüÅÂÈÆ", "¹ÚÁ¤¹Î", "³ë½ÂÈ¯"
+		"µå·¡°ï ¿öÅÍ", "ÃÑÀÌ ¾ø´Â ¼Ò", "Àë¹Î", "ÀçÇõÀÌ"
 	};
 
 	CardGame NewCardGame;
@@ -22,20 +22,5 @@ int main()
 		NewCardGame.AddPlayer(player);
 	}
 
-	NewCardGame.InitGame();
 	NewCardGame.PlayGame();
-
-	//vector<string> winners = NewCardGame.GetWinner();
-
-	//cout << "½ÂÀÚ´Â ";
-	//for (int i = 0; i < winners.size(); ++i)
-	//{
-	//	if (i > 0)
-	//	{
-	//		cout << ", ";
-	//	}
-
-	//	cout << winners[i];
-	//}
-	//cout << "ÀÔ´Ï´Ù!";
 }

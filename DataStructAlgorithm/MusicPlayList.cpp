@@ -65,12 +65,38 @@ public:
 
 	Playlist(const Playlist& other) : head(NULL)
 	{
-		// 복사 생성자
+		if (other.head == NULL)
+		{
+			return;
+		}
+
+		head = new node{ NULL, "" };
+		nodePtr curNode = head;
+		auto it = other.begin();
+
+		while (true)
+		{
+			curNode->name = *it;
+
+			auto tmp = it;
+			++tmp;
+			if (tmp == other.begin())
+			{
+				break;
+			}
+
+			curNode->next = new node{ NULL, "" };
+			curNode = curNode->next;
+			it = tmp;
+		}
 	}
 
 	Playlist(const initializer_list<MusicNode>& ilist) : head(NULL)
 	{
-		// 초기화 리스트 복사
+		for (const auto& element : ilist)
+		{
+			push_front(element.name);
+		}
 	}
 
 	~Playlist()
