@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\MyForwardList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|solutionrelative:DataStructAlgorithm\\MyForwardList.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DynamicArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|solutionrelative:DataStructAlgorithm\\DynamicArray.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\CardGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|solutionrelative:DataStructAlgorithm\\CardGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB82377A-D623-409D-9EBB-AD55790977D4}|DataStructAlgorithm\\DataStructAlgorithm.vcxproj|C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DataStructAlgorithm.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -39,38 +35,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MyForwardList.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\MyForwardList.cpp",
-              "RelativeDocumentMoniker": "DataStructAlgorithm\\MyForwardList.cpp",
-              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\MyForwardList.cpp",
-              "RelativeToolTip": "DataStructAlgorithm\\MyForwardList.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CardGame.cpp",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\CardGame.cpp",
+              "RelativeDocumentMoniker": "DataStructAlgorithm\\CardGame.cpp",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\CardGame.cpp",
+              "RelativeToolTip": "DataStructAlgorithm\\CardGame.cpp",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHgAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-20T17:30:03.436Z",
+              "WhenOpened": "2025-04-21T14:17:49.985Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DynamicArray.cpp",
-              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DynamicArray.cpp",
-              "RelativeDocumentMoniker": "DataStructAlgorithm\\DynamicArray.cpp",
-              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DynamicArray.cpp",
-              "RelativeToolTip": "DataStructAlgorithm\\DynamicArray.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-04-20T17:30:02.847Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "DataStructAlgorithm.cpp",
               "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DataStructAlgorithm.cpp",
               "RelativeDocumentMoniker": "DataStructAlgorithm\\DataStructAlgorithm.cpp",
               "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\DataStructAlgorithm\\DataStructAlgorithm\\DataStructAlgorithm.cpp",
               "RelativeToolTip": "DataStructAlgorithm\\DataStructAlgorithm.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-20T17:30:00.224Z",
               "EditorCaption": ""
