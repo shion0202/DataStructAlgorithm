@@ -24,6 +24,7 @@
     <ProjectGuid>{fb82377a-d623-409d-9ebb-ad55790977d4}</ProjectGuid>
     <RootNamespace>DataStructAlgorithm</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>LinearDataStructure</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,6 +133,7 @@
     <ClCompile Include="DynamicArray.cpp" />
     <ClCompile Include="MusicPlayList.cpp" />
     <ClCompile Include="MyForwardList.cpp" />
+    <ClCompile Include="PrintWatingList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

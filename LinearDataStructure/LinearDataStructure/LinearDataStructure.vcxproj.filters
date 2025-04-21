@@ -13,25 +13,25 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Source Files\Linear">
-      <UniqueIdentifier>{62515dd2-6c94-4baf-943b-cf67280f6f61}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DataStructAlgorithm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CardGame.cpp">
-      <Filter>Source Files\Linear</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DynamicArray.cpp">
-      <Filter>Source Files\Linear</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MusicPlayList.cpp">
-      <Filter>Source Files\Linear</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MyForwardList.cpp">
-      <Filter>Source Files\Linear</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintWatingList.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
