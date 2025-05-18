@@ -15,33 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="NonlinearDataStructure.cpp">
+    <ClCompile Include="NonlinearProblems.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OrganizationTree.cpp">
+    <ClCompile Include="FileSystemStructure.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BinarySearchTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MyPriorityQueue.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MedianHeap.cpp">
+    <ClCompile Include="DataListMergeHeap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="OrganizationTree.h">
+    <ClInclude Include="FileSystemStructure.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BinarySearchTree.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MyPriorityQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MedianHeap.h">
+    <ClInclude Include="DataListMergeHeap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
