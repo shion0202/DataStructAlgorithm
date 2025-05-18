@@ -23,6 +23,8 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
 - 트리
   - 이진 검색 트리 (BST, Binary Serach Tree)
   - 균형 트리 (Balanced tree)
+    - AVL 트리
+    - 레드-블랙 트리 (Red-Black tree)
   - N-항 트리 (N-ary tree)
 - 힙 (heap)
 - 그래프
