@@ -7,18 +7,7 @@
 #include <random>
 using namespace std;
 
-/*
-
-[ 카드 게임 시뮬레이션 ]
-주어진 상황을 분석하고, 가장 적합한 자료 구조를 선택하여 카드 게임을 구현하는 문제
-
-1. 4명의 플레이어가 있고, 각각 임의의 카드 13장을 가지고 게임을 시작한다.
-2. 각 플레이어의 카드 중 임의의 카드 1장을 선택한다.
-3. 4장의 카드를 비교하여, 중복되는 카드 쌍을 제거한다. 이 때 3장의 카드가 같을 경우 임의의 카드 2장을 제거한다.
-4. 남은 카드는 카드를 낸 플레이어가 다시 가져가며, 일치하는 쌍이 없었을 경우 플레이어의 카드 덱을 섞는다.
-5. 이 과정을 한 사람의 카드가 없어질 때까지 반복한다. 가장 먼저 카드가 없어진 플레이어가 승리한다.
-
-*/
+// 플레이어에게 랜덤한 카드를 분배하고, 각 플레이어가 제시한 카드의 모양을 비교하여 일치하는 카드 쌍을 제거하는 게임을 구현하는 문제
 
 #define NumberOfPlayer 4
 
@@ -47,6 +36,7 @@ class CardGame
 public:
 	CardGame()
 	{
+		// 카드 목록을 초기화
 		for (int i = 0; i < 4; ++i)
 		{
 			for (int j = 0; j < 13; ++j)
@@ -144,6 +134,7 @@ public:
 	}
 
 private:
+	// 플레이어에게 랜덤한 카드를 분배하는 초기화 함수
 	void InitGame()
 	{
 		if (players.size() != NumberOfPlayer)
@@ -167,6 +158,7 @@ private:
 		}
 	}
 
+	// 플레이어가 제시한 카드를 가져오는 함수
 	vector<Card> TakeCardFromPlayers()
 	{
 		vector<Card> takeCards;
@@ -179,6 +171,8 @@ private:
 		return takeCards;
 	}
 
+	// 카드들을 비교하여 일치하는 카드 쌍을 제거하는 함수
+	// 카드 모양만을 비교하는 방식으로 구현한 상태
 	vector<bool> IsMatchedCardsList(const vector<Card>& takeCards)
 	{
 		vector<bool> isMatched(4, false);
@@ -215,6 +209,7 @@ private:
 		return isMatched;
 	}
 
+	// 카드 쌍의 일치 여부를 확인하는 함수
 	bool IsMatchedCards(const vector<bool>& isMatched)
 	{
 		for (auto isMatch : isMatched)
@@ -227,6 +222,7 @@ private:
 		return false;
 	}
 
+	// 플레이어의 덱이 비어있는지 확인하는 함수
 	bool IsPlayersDeckEmpty()
 	{
 		bool bIsEmpty = false;
@@ -243,6 +239,8 @@ private:
 		return bIsEmpty;
 	}
 
+	// 플레이어의 덱이 비어있는지 확인하여 승자를 반환하는 함수
+	// 승자가 여러 명일 수 있으므로 벡터로 반환
 	const vector<string> GetWinner()
 	{
 		vector<string> winners;

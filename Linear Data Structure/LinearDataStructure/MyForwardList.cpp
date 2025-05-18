@@ -3,10 +3,7 @@
 #include <algorithm>
 using namespace std;
 
-// 연산자 복습
-// 반복자 복습
-// 초기화 리스트 복습
-// 람다식 복습
+// 연산자, 반복자, 초기화 리스트, 람다식
 struct MyNode
 {
 	MyNode* next;

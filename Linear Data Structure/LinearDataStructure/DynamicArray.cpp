@@ -4,10 +4,7 @@
 #include <sstream>
 using namespace std;
 
-// 포인터와 참조 복습
-// 연산자 복습
-// 복사 생성자 복습
-// 문자열 입력(cin, stringstream) 복습
+// 연산자, 복사 생성자, 입출력
 template <typename T>
 class DynamicArray
 {
