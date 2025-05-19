@@ -83,8 +83,23 @@ void CreateMedianHeap()
     median.Insert(40);
     cout << "중앙 값: " << median.Get() << endl;
 }
+void CreateMyPriorityQueue()
+{
+    MyPrioirtyQueue pq;
+    pq.Push(10);
+    pq.Push(1);
+    pq.Push(2);
+    pq.Push(3);
+    pq.Push(15);
+    pq.Push(20);
+    cout << "가장 큰 값: " << pq.Top() << ", 노드 개수: " << pq.Size() << endl;
+
+    pq.Pop();
+    pq.Pop();
+    cout << "가장 큰 값: " << pq.Top() << ", 노드 개수: " << pq.Size() << endl;
+}
 
 int main()
 {
-    
+    CreateMyPriorityQueue();
 }
