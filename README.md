@@ -33,6 +33,6 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
   - 무방향 그래프 (undirected graph)
   - 방향 그래프 (directed graph)
  
-### 3. 해시 자료 구조
+### 3. 해시 자료구조
 - 해시 테이블 (Hash table)
 - 블룸 필터 (Bloom filter)
