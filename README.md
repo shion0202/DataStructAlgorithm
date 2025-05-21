@@ -1,7 +1,7 @@
 # Data Struct and Algorithm
-C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
+C++ 자료 구조 및 알고리즘 복습을 위한 리포지토리입니다.
 
-코딩 테스트를 위한 자료 구조와 알고리즘 with C++을 참고하였습니다.
+자료구조 및 알고리즘 문서: [Notion Link](https://www.notion.so/verebell2020/C-15d3cd6ab2178059b613c90d9e5b2e68?pvs=4)
 
 ---
 
@@ -32,3 +32,7 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
   - 가중 그래프 (weighted graph)
   - 무방향 그래프 (undirected graph)
   - 방향 그래프 (directed graph)
+ 
+### 3. 해시 자료 구조
+- 해시 테이블 (Hash table)
+- 블룸 필터 (Bloom filter)
