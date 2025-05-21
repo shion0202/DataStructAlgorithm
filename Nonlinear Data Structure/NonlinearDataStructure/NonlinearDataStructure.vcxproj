@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="BinarySearchTree.cpp" />
     <ClCompile Include="MedianHeap.cpp" />
+    <ClCompile Include="MyGraph.cpp" />
     <ClCompile Include="MyPriorityQueue.cpp" />
     <ClCompile Include="NonlinearDataStructure.cpp" />
     <ClCompile Include="OrganizationTree.cpp" />
@@ -136,6 +137,7 @@
   <ItemGroup>
     <ClInclude Include="BinarySearchTree.h" />
     <ClInclude Include="MedianHeap.h" />
+    <ClInclude Include="MyGraph.h" />
     <ClInclude Include="MyPriorityQueue.h" />
     <ClInclude Include="OrganizationTree.h" />
   </ItemGroup>

@@ -3,6 +3,7 @@
 #include "BinarySearchTree.h"
 #include "MedianHeap.h"
 #include "MyPriorityQueue.h"
+#include "MyGraph.h"
 using namespace std;
 
 void CreateOrganizationTree()
@@ -98,8 +99,24 @@ void CreateMyPriorityQueue()
     pq.Pop();
     cout << "가장 큰 값: " << pq.Top() << ", 노드 개수: " << pq.Size() << endl;
 }
+void CreateGraph()
+{
+    MyListGraph graph(6);
+    graph.AddEdge(City::SEOUL, City::DAEGU, 2500);
+	graph.AddEdge(City::SEOUL, City::INCHEON, 1000);
+	graph.AddEdge(City::SEOUL, City::BUSAN, 4000);
+	graph.AddEdge(City::INCHEON, City::BUSAN, 3000);
+	graph.AddEdge(City::INCHEON, City::DAEGU, 2000);
+	graph.AddEdge(City::BUSAN, City::POHANG, 1500);
+	graph.AddEdge(City::POHANG, City::DAEGU, 1000);
+	graph.AddEdge(City::POHANG, City::DAEJEON, 2000);
+	graph.AddEdge(City::DAEGU, City::DAEJEON, 3000);
+
+	graph.AddEdge(City::DAEGU, City::BUSAN, 1500);
+	graph.RemoveEdge(City::DAEGU, City::BUSAN);
+}
 
 int main()
 {
-    CreateMyPriorityQueue();
+    CreateGraph();
 }
