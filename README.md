@@ -26,13 +26,25 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
     - AVL 트리
     - 레드-블랙 트리 (Red-Black tree)
   - N-항 트리 (N-ary tree)
-- 힙 (heap)
+- 힙
+  - 최소/최대 힙 (min/max heap)
 - 그래프
-  - 비가중 그래프 (unweighted graph)
-  - 가중 그래프 (weighted graph)
-  - 무방향 그래프 (undirected graph)
-  - 방향 그래프 (directed graph)
+  - 인접 행렬 및 인접 리스트 그래프
+  - 비가중/가중 그래프 (unweighted/weighted graph)
+  - 무방향/방향 그래프 (undirected/directed graph)
  
 ### 3. 해시 자료구조
 - 해시 테이블 (Hash table)
 - 블룸 필터 (Bloom filter)
+
+### 4. 집합과 맵
+- Set
+  - set
+  - multiset
+  - unordered_set
+  - unordered_multiset
+- Map
+  - map
+  - multimap
+  - unordered_map
+  - unordered_multimap
