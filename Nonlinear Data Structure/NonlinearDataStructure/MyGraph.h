@@ -1,6 +1,8 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <stack>
+#include <queue>
 #include <algorithm>
 using namespace std;
 
@@ -28,6 +30,12 @@ public:
 	// 간선 삭제
 	void RemoveEdge(const City& from, const City& to);
 
+	void DFS();
+	void BFS();
+
+	void OldDFS();
+	void OldBFS();
+
 private:
 	vector<vector<int>> data;
 };
@@ -40,6 +48,9 @@ public:
 
 	void AddEdge(const City& from, const City& to, int distance);
 	void RemoveEdge(const City& from, const City& to);
+
+	void DFS();
+	void BFS();
 
 private:
 	vector<vector<pair<int, int>>> data;

@@ -111,9 +111,15 @@ void CreateGraph()
 	graph.AddEdge(City::POHANG, City::DAEGU, 1000);
 	graph.AddEdge(City::POHANG, City::DAEJEON, 2000);
 	graph.AddEdge(City::DAEGU, City::DAEJEON, 3000);
+    graph.AddEdge(City::DAEGU, City::BUSAN, 1500);
+    cout << endl;
+    graph.BFS();
+    graph.DFS();
 
-	graph.AddEdge(City::DAEGU, City::BUSAN, 1500);
 	graph.RemoveEdge(City::DAEGU, City::BUSAN);
+    cout << endl;
+    graph.BFS();
+    graph.DFS();
 }
 
 int main()

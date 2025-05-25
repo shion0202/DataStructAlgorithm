@@ -39,12 +39,18 @@
     <ClCompile Include="DoublyLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StackAndQueue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircularLinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DoublyLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StackAndQueue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

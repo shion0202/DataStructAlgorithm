@@ -136,10 +136,12 @@
     <ClCompile Include="MusicPlayList.cpp" />
     <ClCompile Include="MyForwardList.cpp" />
     <ClCompile Include="PrintWatingList.cpp" />
+    <ClCompile Include="StackAndQueue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CircularLinkedList.h" />
     <ClInclude Include="DoublyLinkedList.h" />
+    <ClInclude Include="StackAndQueue.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
