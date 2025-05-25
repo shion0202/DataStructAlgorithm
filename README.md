@@ -26,6 +26,10 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
     - AVL 트리
     - 레드-블랙 트리 (Red-Black tree)
   - N-항 트리 (N-ary tree)
+  - B-tree
+    - 2-3-4 tree
+    - B+ tree
+  - 트라이 (Trie)
 - 힙
   - 최소/최대 힙 (min/max heap)
 - 그래프
