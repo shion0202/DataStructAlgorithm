@@ -38,11 +38,9 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
 - 블룸 필터 (Bloom filter) - ${\textsf{\color{red}미구현}}$
 
 ### 4. 집합과 맵
-- Set - ${\textsf{\color{red}미구현}}$
-  - multiset - ${\textsf{\color{red}미구현}}$
-  - unordered_set - ${\textsf{\color{red}미구현}}$
-  - unordered_multiset - ${\textsf{\color{red}미구현}}$
-- Map - ${\textsf{\color{red}미구현}}$
-  - multimap - ${\textsf{\color{red}미구현}}$
-  - unordered_map - ${\textsf{\color{red}미구현}}$
-  - unordered_multimap - ${\textsf{\color{red}미구현}}$
+- Set
+  - HastSet - ${\textsf{\color{red}미구현}}$
+  - TreeSet - ${\textsf{\color{red}미구현}}$
+- Map
+  - HashMap - ${\textsf{\color{red}미구현}}$
+  - TreeMap - ${\textsf{\color{red}미구현}}$
