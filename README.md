@@ -34,8 +34,8 @@ C++ 자료구조 및 알고리즘 복습을 위한 리포지토리입니다.
   - 무방향/방향 그래프 (undirected/directed graph) - **구현**
  
 ### 3. 해시 자료구조
-- 해시 테이블 (Hash table) - ${\textsf{\color{red}미구현}}$
-- 블룸 필터 (Bloom filter) - ${\textsf{\color{red}미구현}}$
+- 해시 테이블 (Hash table) - **구현**
+- 블룸 필터 (Bloom filter) - **구현**
 
 ### 4. 집합과 맵
 - Set
