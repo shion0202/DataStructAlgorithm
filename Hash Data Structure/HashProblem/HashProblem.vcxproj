@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{cbd180ca-e276-4d1f-af24-2bca747d9cc3}</ProjectGuid>
-    <RootNamespace>HashDataStructure</RootNamespace>
+    <ProjectGuid>{0f4b8c50-5be5-4331-8bcc-f501ea2fe033}</ProjectGuid>
+    <RootNamespace>HashProblem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,6 +70,10 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\OpenSSL-Win64\lib\VC\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -104,10 +108,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>MDd/libcrypto.lib;MDd/libcrypto_static.lib;MDd/libssl.lib;MDd/libssl_static.lib;MTd/libcrypto.lib;MTd/libcrypto_static.lib;MTd/libssl.lib;MTd/libssl_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,17 +133,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BloomFilter.cpp" />
-    <ClCompile Include="ChainingHashTable.cpp" />
-    <ClCompile Include="CuckooHashTable.cpp" />
-    <ClCompile Include="HashDataStructure.cpp" />
-    <ClCompile Include="SimpleDictionary.cpp" />
+    <ClCompile Include="EmailDuplicateCheck.cpp" />
+    <ClCompile Include="HashProblem.cpp" />
+    <ClCompile Include="URLMapping.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BloomFilter.h" />
-    <ClInclude Include="ChainingHashTable.h" />
-    <ClInclude Include="CuckooHashTable.h" />
-    <ClInclude Include="SimpleDictionary.h" />
+    <ClInclude Include="EmailDuplicateCheck.h" />
+    <ClInclude Include="URLMapping.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

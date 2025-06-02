@@ -15,33 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HashDataStructure.cpp">
+    <ClCompile Include="HashProblem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleDictionary.cpp">
+    <ClCompile Include="URLMapping.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ChainingHashTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CuckooHashTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BloomFilter.cpp">
+    <ClCompile Include="EmailDuplicateCheck.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SimpleDictionary.h">
+    <ClInclude Include="URLMapping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChainingHashTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CuckooHashTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BloomFilter.h">
+    <ClInclude Include="EmailDuplicateCheck.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
