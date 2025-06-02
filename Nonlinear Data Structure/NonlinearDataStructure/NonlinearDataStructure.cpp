@@ -4,6 +4,7 @@
 #include "MedianHeap.h"
 #include "MyPriorityQueue.h"
 #include "MyGraph.h"
+#include "RedBlackTree.h"
 using namespace std;
 
 void CreateOrganizationTree()
@@ -122,7 +123,145 @@ void CreateGraph()
     graph.DFS();
 }
 
+bool CheckRBProperties(RBNode* node, MyRBTree& tree)
+{
+    if (node == tree.NIL)
+        return true;
+
+    // Rule 1: 루트는 검정
+    if (node == tree.root && node->isRed)
+    {
+        cout << "Root가 Red: " << node->data << endl;
+        return false;
+    }
+
+    // Rule 3: RED 노드의 자식은 모두 BLACK
+    if (node->isRed)
+    {
+        if (node->left->isRed || node->right->isRed)
+        {
+            cout << "Double Red 위반: " << node->data << endl;
+            return false;
+        }
+    }
+
+    // Rule 4: 모든 리프에서 블랙 높이 동일
+    int leftBlack = 0;
+    RBNode* left = node;
+    while (left != tree.NIL)
+    {
+        if (!left->isRed) leftBlack++;
+        left = left->left;
+    }
+
+    int rightBlack = 0;
+    RBNode* right = node;
+    while (right != tree.NIL)
+    {
+        if (!right->isRed) rightBlack++;
+        right = right->right;
+    }
+
+    if (leftBlack != rightBlack)
+    {
+        cout << "블랙 높이 불일치: " << node->data << endl;
+        return false;
+    }
+
+    return CheckRBProperties(node->left, tree) && CheckRBProperties(node->right, tree);
+}
+void TestCase1()
+{
+    cout << "=== 테스트 케이스 1: 기본 동작 ===" << endl;
+    MyRBTree tree;
+
+    // 삽입 테스트
+    vector<int> inserts = { 10, 20, 30, 15, 25, 35, 5, 1 };
+    for (int num : inserts)
+    {
+        tree.Insert(num);
+        if (!CheckRBProperties(tree.root, tree))
+        {
+            cout << "삽입 실패: " << num << endl;
+            return;
+        }
+    }
+    tree.PrintTree();
+    cout << "삽입 테스트 통과!" << endl;
+
+    // 삭제 테스트
+    vector<int> deletes = { 20, 5 };
+    for (int num : deletes)
+    {
+        tree.DeleteNode(num);
+        if (!CheckRBProperties(tree.root, tree))
+        {
+            cout << "삭제 실패: " << num << endl;
+            return;
+        }
+    }
+    tree.PrintTree();
+    cout << "삭제 테스트 통과!" << endl;
+}
+void TestCase2()
+{
+    cout << "\n=== 테스트 케이스 2: 극단적 경우 ===" << endl;
+    MyRBTree tree;
+
+    // 루트 삭제 테스트
+    tree.Insert(100);
+    tree.DeleteNode(100);
+    if (tree.root != tree.NIL)
+    {
+        cout << "루트 삭제 실패!" << endl;
+        return;
+    }
+    cout << "루트 삭제 테스트 통과!" << endl;
+
+    // 역순 삽입 테스트
+    for (int i = 10; i >= 1; i--) tree.Insert(i);
+    if (!CheckRBProperties(tree.root, tree))
+    {
+        cout << "역순 삽입 실패" << endl;
+        return;
+    }
+    cout << "역순 삽입 테스트 통과!" << endl;
+}
+void TestCase3()
+{
+    cout << "\n=== 테스트 케이스 3: 랜덤 테스트 ===" << endl;
+    MyRBTree tree;
+    vector<int> randomDatas;
+    srand(time(nullptr));
+
+    // 1000개 랜덤 연산
+    for (int i = 0; i < 1000; i++) {
+        int num = rand() % 500;
+        if (rand() % 2 == 0) {
+            cout << "트리 삽입" << endl;
+            tree.Insert(num);
+            randomDatas.push_back(num);
+        }
+        else
+        {
+            if (randomDatas.empty()) continue;
+            cout << "트리 삭제" << endl;
+            num = rand() % randomDatas.size();
+            tree.DeleteNode(randomDatas[num]);
+        }
+
+        if (!CheckRBProperties(tree.root, tree))
+        {
+            cout << "랜덤 테스트 실패: " << randomDatas[num] << endl;
+            return;
+        }
+    }
+    cout << "랜덤 테스트 통과!" << endl;
+}
+
 int main()
 {
-    CreateGraph();
+    TestCase1();
+    TestCase2();
+    TestCase3();
 }

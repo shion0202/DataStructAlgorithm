@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{55acb639-a6b8-4457-93d4-fa8d070f0503}</ProjectGuid>
-    <RootNamespace>NonlinearDataStructure</RootNamespace>
+    <ProjectGuid>{cbd180ca-e276-4d1f-af24-2bca747d9cc3}</ProjectGuid>
+    <RootNamespace>HashDataStructure</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,21 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BinarySearchTree.cpp" />
-    <ClCompile Include="MedianHeap.cpp" />
-    <ClCompile Include="MyGraph.cpp" />
-    <ClCompile Include="MyPriorityQueue.cpp" />
-    <ClCompile Include="NonlinearDataStructure.cpp" />
-    <ClCompile Include="OrganizationTree.cpp" />
-    <ClCompile Include="RedBlackTree.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="BinarySearchTree.h" />
-    <ClInclude Include="MedianHeap.h" />
-    <ClInclude Include="MyGraph.h" />
-    <ClInclude Include="MyPriorityQueue.h" />
-    <ClInclude Include="OrganizationTree.h" />
-    <ClInclude Include="RedBlackTree.h" />
+    <ClCompile Include="HashDataStructure.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
